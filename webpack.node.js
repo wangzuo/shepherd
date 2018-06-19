@@ -1,4 +1,5 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
@@ -9,11 +10,7 @@ module.exports = {
     filename: 'shepherd.node.js',
   },
 
-  externals: {
-    lodash: 'lodash',
-    jsonschema: 'jsonschema',
-    'bn.js': 'bn.js',
-  },
+  externals: [nodeExternals()],
 
   resolve: {
     alias: {

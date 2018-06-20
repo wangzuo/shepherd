@@ -4,7 +4,6 @@
   "description": "Ensure high-availability for your JSON-RPC calls while improving user-experience. Shepherd automatically cancels calls that are taking too long to respond and executes them against fresh provider infrastructure. Shepherd is incredibly configurable — you can set filters on provider infrastructure to ensure that sensitive JSON-RPC calls are contained, dynamically bias against poorly performing provider infrastructure, and more!",
   "main": "dist/shepherd.node.js",
   "unpkg": "dist/shepherd.min.js",
-  "module": "dist/shepherd.es6.js",
   "typings": "dist/lib",
   "scripts": {
     "gulp": "node node_modules/gulp/bin/gulp.js",
@@ -47,6 +46,7 @@
   ],
   "homepage": "https://github.com/MyCryptoHQ/shepherd#readme",
   "devDependencies": {
+    "babel-minify": "^0.4.3",
     "coveralls": "^3.0.0",
     "gulp": "^3.9.1",
     "husky": "^0.14.3",
@@ -59,6 +59,8 @@
     "rollup": "^0.57.1",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.12.0",
+    "rollup-plugin-uglify": "^4.0.0",
+    "rollup-plugin-uglify-es": "^0.0.1",
     "ts-jest": "^22.4.2",
     "ts-loader": "^4.4.1",
     "tslint": "^5.9.1",

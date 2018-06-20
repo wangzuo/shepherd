@@ -7,6 +7,7 @@ module.exports = {
   mode: 'production',
   target: 'node',
   output: {
+    libraryTarget: 'commonjs2',
     filename: 'shepherd.node.js',
   },
 
